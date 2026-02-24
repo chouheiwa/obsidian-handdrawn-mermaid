@@ -13,18 +13,25 @@ An [Obsidian](https://obsidian.md) plugin that renders Mermaid diagrams in a han
 - Live preview in the settings panel
 
 ## Installation
+This plugin is not yet available in the Obsidian Community plugins directory. You can install it using one of the methods below.
 
-### From Obsidian Community Plugins
+### Using BRAT (Recommended)
 
-1. Open **Settings → Community plugins → Browse**
-2. Search for **Handdrawn Mermaid**
-3. Click **Install**, then **Enable**
+[BRAT](https://github.com/TfTHacker/obsidian42-brat) (Beta Reviewers Auto-update Tester) lets you install plugins not yet in the official community repository.
+
+1. Install BRAT from [Obsidian Community plugins](https://obsidian.md/plugins?id=obsidian42-brat)
+2. Open BRAT plugin settings
+3. Click **Add Beta plugin**
+4. Enter `https://github.com/chouheiwa/obsidian-handdrawn-mermaid`
+5. Select **Latest version**
+6. Click **Add Plugin**
 
 ### Manual
 
-1. Download `main.js` and `manifest.json` from the [latest release](https://github.com/chouheiwa/obsidian-handdrawn-mermaid/releases/latest)
-2. Copy them to `<vault>/.obsidian/plugins/handdrawn-mermaid/`
-3. Reload Obsidian and enable the plugin in **Settings → Community plugins**
+1. Go to the [Releases page](https://github.com/chouheiwa/obsidian-handdrawn-mermaid/releases/latest)
+2. Download `main.js` and `manifest.json`
+3. Copy both files to `<vault>/.obsidian/plugins/handdrawn-mermaid/`
+4. Reload Obsidian and enable the plugin in **Settings → Community plugins**
 
 ## Settings
 
