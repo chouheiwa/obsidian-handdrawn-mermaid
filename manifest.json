@@ -1,0 +1,10 @@
+{
+  "id": "handdrawn-mermaid",
+  "name": "Handdrawn Mermaid",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Render Mermaid diagrams in a handdrawn style.",
+  "author": "chouheiwa",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
