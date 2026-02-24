@@ -1,4 +1,4 @@
-import { App, Plugin, PluginSettingTab, Setting, loadMermaid, Notice, MarkdownView, WorkspaceLeaf } from 'obsidian';
+import { App, Plugin, PluginSettingTab, Setting, loadMermaid, MarkdownView, WorkspaceLeaf } from 'obsidian';
 import { HanddrawnMermaidSettings, DEFAULT_SETTINGS } from './settings';
 import { convertToHanddrawn } from './handdrawn';
 
@@ -89,21 +89,16 @@ export default class HanddrawnMermaidPlugin extends Plugin {
 	}
 
 	private async applyHanddrawn(svgEl: SVGSVGElement) {
-		console.log('[handdrawn-mermaid] applyHanddrawn start');
 		try {
 			const result = await convertToHanddrawn(svgEl, this.settings);
 			if (result) {
 				result.setAttribute('data-handdrawn', 'true');
 				svgEl.replaceWith(result);
-				console.log('[handdrawn-mermaid] applyHanddrawn success');
-				new Notice('[handdrawn-mermaid] 手绘转换成功 ✓');
 			} else {
-				console.warn('[handdrawn-mermaid] applyHanddrawn: convertToHanddrawn returned null');
-			new Notice('[handdrawn-mermaid] 转换返回 null，请检查 SVG');
+				console.warn('[handdrawn-mermaid] convertToHanddrawn returned null');
 			}
 		} catch (e) {
 			console.error('[handdrawn-mermaid] conversion failed:', e);
-			new Notice('[handdrawn-mermaid] 转换失败: ' + (e as Error).message);
 		}
 	}
 
